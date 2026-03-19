@@ -1,0 +1,62 @@
+/*Importando fuentes*/
+@font-face {
+    font-family: "TT Supermolot Neue";
+    src: url('fuentes/tt-supermolot-group/TTSupermolotNeue-Regular.woff2') format('woff2'),
+         url('fuentes/tt-supermolot-group/TTSupermolotNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "TT Supermolot Neue", sans-serif;
+    background-color: #20123a;
+}
+
+/*Probando los id's*/
+#foto-carnet {
+    /*Ajusto el ancho y largo de la foto*/
+    width: 150px;
+    height: 150px;
+
+    /*La fuerzo a ser un cuadrado*/
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 15px;
+    margin-left: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/*Probando las classes*/
+/*Cambiando los items de las listas*/
+.item-gusto{
+    color: #ffffff;
+    padding: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.item-gusto:hover{
+    color: #beab72;
+    transform: translateX(10px);
+    font-weight: bold;
+}
+
+/*Cambiando los encabezados*/
+.encabezado {
+    color:  #ffffff;
+}
+
+.texto-plano {
+    color:  #ffffff;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #4f2361;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}

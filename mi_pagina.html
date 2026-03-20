@@ -7,18 +7,54 @@
     <link rel="stylesheet" href="mi_pagina.css">
 </head>
 <body>
-    <div class = "contenedor">
-        <h1 class="encabezado">Este es el portafolio de Elias Alegre</h1>
-        <img id="foto-carnet" src="imagenes/Foto_carnet.jpeg" alt="Foto Elias Alegre" width="200"/>
-        <h2 class="encabezado">¿Quien soy?</h2>
-        <p class="texto-plano">Soy un estudiante de 3er año de la licenciatura en sistemas.</p>
-        <p class="texto-plano">Me gusta el desarrollo backend y me gustaria aprender a hacer paginas web.</p>
+    <div class = "contenedor-base">
+        <div class="encabezado">
+            <h3>Este es el portafolio de Elias Alegre</h3>
+            <div class="efecto-subrayado"></div>
+        </div>
+        <br>
+        <h1 id="titulo-grande">Soy desarrolador Backend</h1>
+        <div class="contenedor-foto-carnet">
+            <img id="foto-carnet" src="imagenes/Foto_carnet.jpeg" alt="Foto Elias Alegre"/>
+        </div>
+        <h2 class="encabezado">Sobre mi</h2>
+
+        <div class="texto-plano">
+            <p>Soy un estudiante de 3er año de la licenciatura en sistemas.</p>
+            <p>Desarrollo las soluciones de Software mas australes del mundo.</p>
+        </div>
+
         <h2 class="encabezado">Mis gustos</h2>
-        <ul>
-            <li class="item-gusto"> El Jiu-Jitsu Brasilero.</li>
-        <li class="item-gusto"> Peliculas.</li>
-        <li class="item-gusto"> Programar.</li>
-        </ul>
+
+        <!--Contenedores de fotos-->
+        <div class="contenedor-foto-gustos">
+            <div class="item-gustos">
+                <span class="titulo-gusto">Jiu-Jitsu</span>
+                <img class="foto-gusto" src="imagenes/bjj-icon.jpg" alt="Foto de Jiu-Jitsu"/>
+                <div class="capa-color">
+                    <span class="desc-gusto">Entreno desde hace 8 meses, 
+                        soy Faixa Blanca y en un mes tengo mi primer torneo. 
+                        OSS!</span>
+                </div>
+            </div>
+
+            <div class="item-gustos">
+                <span class="titulo-gusto">Programar</span>
+                <img class="foto-gusto" src="imagenes/code.jpg" alt="Foto de Programacion"/>
+                <div class="capa-color">
+                    <span class="desc-gusto">Me gusta programar, la logica y aprender nuevos lenguajes y paradigmas dia a dia.</span>
+                </div>
+            </div>
+
+            <div class="item-gustos">
+                <span class="titulo-gusto">Hardware</span>
+                <img class="foto-gusto" src="imagenes/arduino-placa.webp" alt="Foto de una placa arduino">
+                <div class="capa-color">
+                    <span class="desc-gusto">Me gusta el Hardware</span>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>

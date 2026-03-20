@@ -7,12 +7,24 @@
     font-style: normal;
 }
 
+/*Cambio el color prinicpal del fondo*/
 body {
     font-family: "TT Supermolot Neue", sans-serif;
-    background-color: #20123a;
+    background-color: #00222a;
 }
 
-/*Probando los id's*/
+.contenedor-base {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #004f74;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+/*==========Estilos para las fotos==========*/
+/*Altero mi foto principal usando un id*/
 #foto-carnet {
     /*Ajusto el ancho y largo de la foto*/
     width: 150px;
@@ -26,37 +38,115 @@ body {
     margin-left: 20px;
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
 
-/*Probando las classes*/
-/*Cambiando los items de las listas*/
-.item-gusto{
-    color: #ffffff;
-    padding: 5px;
-    transition: all 0.3s;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
-.item-gusto:hover{
-    color: #beab72;
-    transform: translateX(10px);
-    font-weight: bold;
+#foto-carnet:hover{
+    transform: rotate(5deg);
 }
 
-/*Cambiando los encabezados*/
+/*Separo las fotos en una especie de flowlayout*/
+.contenedor-foto-gustos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*Este es el envoltorio de las fotos*/
+.item-gustos{
+    width: 250px; /*Ajusto las fotos para que sean rectangulares*/
+    height: 350px;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+/*Cada foto se ajusta al ancho y largo del envoltorio*/
+.foto-gusto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/*El disparador de la animacion es el envoltorio de las imagenes*/
+.item-gustos:hover {
+    transform: scale(1.03);
+}
+
+.item-gustos:hover .capa-color {
+    opacity: 1;
+}
+
+/*Esta es la capa encargada de pintar las fotos*/
+.capa-color{
+    position: absolute; /*el color se va a mover dentro del espacio del item*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    /*Definimos el texto que va a aparecer arriba*/
+    display: flex;
+    justify-content: center; /*Centrado por X*/
+    align-items: center; /*Centrado por Y*/
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.desc-gusto{
+    max-width: 80%; /*Separo las palabras del borde de la foto*/
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+.item-gustos:hover .desc-gusto{
+    transform: translateY(0);
+}
+
+/*========== Estilos para texto ==========*/
+
 .encabezado {
     color:  #ffffff;
+    border-bottom: 2px solid transparent; /*Subrayado dinamico*/
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.encabezado:hover{
+    border-bottom: 2px solid #ffe08c;
+}
+
+#titulo-grande{
+    font-size: 2.5rem;
+    color:  #ffffff;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+#titulo-grande:hover{
+    border-bottom: 2px solid #ffe08c;
 }
 
 .texto-plano {
     color:  #ffffff;
 }
 
-.contenedor {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #4f2361;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+/*Corresponde a los titulos de fotos*/
+.titulo-gusto{
+    color: white;
+    position: absolute;
+    padding: 20px;
+    font-size: 30px;
+    justify-content: left;
+    text-transform: uppercase;
 }
